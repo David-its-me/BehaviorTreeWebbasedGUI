@@ -1,0 +1,120 @@
+
+
+body {
+    margin: 0;
+    font-family: Source Sans Pro, Helvetica, "sans-serif";
+    line-height: 1.3;
+    width: 100%;
+    background-color: #333333;
+}
+
+.vertical-align {    
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; /* Align items horizontally in the center */
+    width: 100%; /* Occupy full width of the viewport */
+    height: 100vh; /* Occupy full height of the viewport */
+    margin: 0 auto; /* Horizontally center the container */
+    transition: transform 0.3s; /* Add transition for smooth scaling */
+    transform: scale(0.7);
+}
+
+.horizontal-align{
+    display: flex; /* This establishes a flex container */
+    justify-content: center; /* Align items horizontally in the center */
+    transition: transform 0.3s; /* Add transition for smooth scaling */
+}
+  
+.item {
+    /* Optional styles for each item */
+    display: flex; /* This establishes a flex container */
+    justify-content: center; /* Align items horizontally in the center */
+    padding: 40px 80px;
+    /*border: 1px solid #000;*/
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1000px) {
+    .vertical-align { 
+      transform: scale(0.7); /* Scale the items down for smaller screens */
+    }
+    .horizontal-align{
+        display: inline;
+    }
+}
+  
+/* Media query for larger screens */
+@media screen and (min-width: 1400px) {
+    .vertical-align {
+        transform: scale(1.0); /* Scale the items up for larger screens */
+    }
+}
+
+/* Button style */
+.button {
+    position: relative;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 9px solid #38c3aa;
+    color: #fff;
+    background-color: #38c3aa;
+    border-radius: 15px;
+    cursor: pointer;    
+    z-index: 9999;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Button hover effect */
+.button:hover {
+    background-color: #47a68d;
+    border-color: #47a68d;
+}
+
+/* Button active effect */
+.button:active {
+    background-color: #47a68d;
+    border-color: #47a68d;
+}
+
+.loading-bar {
+    width: 0%;
+    height: 100%;
+    border-radius: 9px;
+    background-color: #ffffff00; /* Loading bar color if hidden */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: width 2s ease, background-color 2s; /* Smooth transition for width change */
+}
+
+.buttonText{
+    display: inline-block;    
+    padding: 40px 70px;
+}
+ 
+  
+  /* Styles for the spinning wheel */
+.spinner {    
+    margin: 2px 2px;
+    display: none; /* Hide the spinner by default */
+    width: 40px;
+    height: 40px;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    /*position: absolute;*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Ensure spinner is on top of other elements */
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
