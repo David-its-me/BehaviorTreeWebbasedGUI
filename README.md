@@ -25,5 +25,7 @@ The ```-p``` option opens a port between the operating system and the container,
 Now you can open http://127.0.0.1/ or http://localhost/ and see if everything is working!
 
 ## Modify the Buttons
-You may want to modify the buttons or add/remvove some of them. All the code for the webapplication is inside the [static](static/) folder, because ii is the static content of the webserver.
-Inside the 
+You may want to modify the buttons or add/remvove some of them. All the code for the webapplication is inside the [static](static/) folder, as it refers to the static content of the webserver.
+
+At the moment the buttons and their respective functionality is hardcoded inside the webapplication.
+Inside the [html](static/html/main.html) you can modify the buttons. Please also be aware that you need ton add a handle for each button at the bottom of the [main.js](static/script/main.js) file.
