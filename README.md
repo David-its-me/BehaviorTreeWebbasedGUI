@@ -23,3 +23,7 @@ docker run -p 80:80 <tag>
 The ```-p``` option opens a port between the operating system and the container, to be able to access the container on port 80.
 
 Now you can open http://127.0.0.1/ or http://localhost/ and see if everything is working!
+
+## Modify the Buttons
+You may want to modify the buttons or add/remvove some of them. All the code for the webapplication is inside the [static](static/) folder, because ii is the static content of the webserver.
+Inside the 
